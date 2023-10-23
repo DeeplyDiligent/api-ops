@@ -13,7 +13,9 @@
 <!-- Rate lmit the requests to 5 per seond  -->
 
 <policies>
-    <rate-limit calls="5" renewal-period="60" counter-key="@(context.Request.IpAddress.ToString())" />
+    <inbound>
+        <rate-limit-by-key calls="5" renewal-period="60" counter-key="@(context.Request.IpAddress)" />
+    </inbound>
     <backend>
         <forward-request>
             <set-query-parameter name="size" exists-action="override">
