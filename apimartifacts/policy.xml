@@ -8,10 +8,33 @@
     - To remove a policy, delete the corresponding policy statement from the policy document.
     - Policies are applied in the order of their appearance, from the top down.
 -->
+
+<!-- Query: when the parameter size is small, medium or large write the policy to change it to S, M or L else pass through the original parameter value-->
+<!-- Rate lmit the requests to 5 per seond  -->
+
 <policies>
-	<inbound />
-	<backend>
-		<forward-request />
-	</backend>
-	<outbound />
+    <inbound>
+        <rate-limit calls="5" renewal-period="1" />
+    </inbound>
+    <backend>
+        <forward-request>
+            <set-query-parameter name="size" exists-action="override">
+                <choose>
+                    <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "small")'>
+                        <set-value> S </set-value>
+                    </when>
+                    <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "medium")'>
+                        <set-value> M </set-value>
+                    </when>
+                    <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "large")'>
+                        <set-value> L </set-value>
+                    </when>
+                    <otherwise>
+                        <set-value>@(context.Request.Url.Query.GetValueOrDefault("size", ""))</set-value>
+                    </otherwise>
+                </choose>
+            </set-query-parameter>
+        </forward-request>
+    </backend>
+    <outbound />
 </policies>

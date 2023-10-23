@@ -1,0 +1,129 @@
+// Generate a json list of 20 cat food products with the following properties:
+// brand (string)
+// product (string)
+// price (number)
+// size (string: S, M, L)
+
+
+[
+    {
+        "brand": "Purina",
+        "product": "Friskies Classic Pate",
+        "price": 0.50,
+        "size": "M"
+    },
+    {
+        "brand": "Fancy Feast",
+        "product": "Grilled Chicken Feast in Gravy",
+        "price": 0.75,
+        "size": "S"
+    },
+    {
+        "brand": "Blue Buffalo",
+        "product": "Indoor Health Chicken & Brown Rice Recipe",
+        "price": 1.25,
+        "size": "L"
+    },
+    {
+        "brand": "Hill's Science Diet",
+        "product": "Adult Indoor Chicken Recipe",
+        "price": 1.50,
+        "size": "M"
+    },
+    {
+        "brand": "Royal Canin",
+        "product": "Indoor Adult Dry Cat Food",
+        "price": 2.00,
+        "size": "S"
+    },
+    {
+        "brand": "Purina",
+        "product": "Fancy Feast Classic Pate",
+        "price": 0.50,
+        "size": "M"
+    },
+    {
+        "brand": "Friskies",
+        "product": "Savory Shreds Turkey & Cheese Wet Cat Food",
+        "price": 0.75,
+        "size": "S"
+    },
+    {
+        "brand": "Blue Buffalo",
+        "product": "Wilderness Chicken Recipe Grain-Free Dry Cat Food",
+        "price": 1.25,
+        "size": "L"
+    },
+    {
+        "brand": "Hill's Science Diet",
+        "product": "Adult 7+ Indoor Chicken Recipe",
+        "price": 1.50,
+        "size": "M"
+    },
+    {
+        "brand": "Royal Canin",
+        "product": "Digest Sensitive Thin Slices in Gravy Wet Cat Food",
+        "price": 2.00,
+        "size": "S"
+    },
+    {
+        "brand": "Purina",
+        "product": "Fancy Feast Grilled Chicken Feast in Gravy",
+        "price": 0.50,
+        "size": "M"
+    },
+    {
+        "brand": "Friskies",
+        "product": "Savory Shreds Chicken & Salmon Wet Cat Food",
+        "price": 0.75,
+        "size": "S"
+    },
+    {
+        "brand": "Blue Buffalo",
+        "product": "Freedom Indoor Adult Chicken Recipe Grain-Free Canned Cat Food",
+        "price": 1.25,
+        "size": "L"
+    },
+    {
+        "brand": "Hill's Science Diet",
+        "product": "Adult Perfect Weight Chicken Recipe",
+        "price": 1.50,
+        "size": "M"
+    },
+    {
+        "brand": "Royal Canin",
+        "product": "Indoor Beauty Thin Slices in Gravy Wet Cat Food",
+        "price": 2.00,
+        "size": "S"
+    },
+    {
+        "brand": "Purina",
+        "product": "Fancy Feast Classic Broths Variety Pack",
+        "price": 0.50,
+        "size": "M"
+    },
+    {
+        "brand": "Friskies",
+        "product": "Savory Shreds Beef & Chicken Wet Cat Food",
+        "price": 0.75,
+        "size": "S"
+    },
+    {
+        "brand": "Blue Buffalo",
+        "product": "Healthy Gourmet Indoor Chicken Entree Wet Cat Food",
+        "price": 1.25,
+        "size": "L"
+    },
+    {
+        "brand": "Hill's Science Diet",
+        "product": "Adult Urinary & Hairball Control Chicken Recipe",
+        "price": 1.50,
+        "size": "M"
+    },
+    {
+        "brand": "Royal Canin",
+        "product": "Indoor 7+ Thin Slices in Gravy Wet Cat Food",
+        "price": 2.00,
+        "size": "S"
+    }
+]

@@ -1,0 +1,55 @@
+# Write an openapi specification for a cat food API. the api has the following return value: {
+#     "result": [
+#         {
+#             "brand": "Purina",
+#             "price": 0.5,
+#             "product": "Friskies Classic Pate",
+#             "size": "M"
+#         },...
+#     ],
+#     "success": true
+# }
+# there is one endpoint: /catfood and one parameter size which is required and can be S, M, L or all.
+
+openapi: 3.0.0
+info:
+  title: Cat Food API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+paths:
+  /catfood:
+    get:
+      summary: Get cat food products
+      parameters:
+        - name: size
+          in: query
+          description: The size of the cat food product (S, M, L, or all)
+          required: true
+          schema:
+            type: string
+            enum: [S, M, L, all]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        brand:
+                          type: string
+                        price:
+                          type: number
+                          format: float
+                        product:
+                          type: string
+                        size:
+                          type: string
+                  success:
+                    type: boolean

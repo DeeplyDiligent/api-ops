@@ -1,3 +1,6 @@
+# - dayno max and min
+# - apim policy
+
 openapi: 3.0.1
 info:
   title: Demo Conference API
@@ -99,9 +102,11 @@ paths:
       parameters:
         - name: dayno
           in: query
-          description: Format - int32.
+          description: Format - int32. Day number between 1-7.
           schema:
             type: integer
+            minimum: 1
+            maximum: 7
         - name: speakername
           in: query
           schema:
@@ -111,6 +116,7 @@ paths:
           description: OK
           content:
             application/vnd.collection+json: { }
+
   '/speaker/{id}':
     get:
       summary: GetSpeaker
