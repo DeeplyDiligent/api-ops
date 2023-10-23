@@ -21,16 +21,16 @@
             <set-query-parameter name="size" exists-action="override">
                 <choose>
                     <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "small")'>
-                        <set-value> S </set-value>
+                        <value> S </value>
                     </when>
                     <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "medium")'>
-                        <set-value> M </set-value>
+                        <value> M </value>
                     </when>
                     <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "large")'>
-                        <set-value> L </set-value>
+                        <value> L </value>
                     </when>
                     <otherwise>
-                        <set-value>@(context.Request.Url.Query.GetValueOrDefault("size", ""))</set-value>
+                        <value>@(context.Request.Url.Query.GetValueOrDefault("size", ""))</value>
                     </otherwise>
                 </choose>
             </set-query-parameter>
