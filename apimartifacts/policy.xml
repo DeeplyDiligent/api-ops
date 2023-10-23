@@ -15,22 +15,28 @@
 <policies>
     <inbound>
         <rate-limit-by-key calls="5" renewal-period="60" counter-key="@(context.Request.IpAddress)" />
-        <set-query-parameter name="size" exists-action="override">
-            <choose>
-                <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "small")'>
+        <choose>
+            <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "small")'>
+                <set-query-parameter name="size" exists-action="override">
                     <value> S </value>
-                </when>
-                <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "medium")'>
+                </set-query-parameter>
+            </when>
+            <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "medium")'>
+                <set-query-parameter name="size" exists-action="override">
                     <value> M </value>
-                </when>
-                <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "large")'>
+                </set-query-parameter>
+            </when>
+            <when condition='@(context.Request.Url.Query.GetValueOrDefault("size", "").ToLower() == "large")'>
+                <set-query-parameter name="size" exists-action="override">
                     <value> L </value>
-                </when>
-                <otherwise>
+                </set-query-parameter>
+            </when>
+            <otherwise>
+                <set-query-parameter name="size" exists-action="override">
                     <value>@(context.Request.Url.Query.GetValueOrDefault("size", ""))</value>
-                </otherwise>
-            </choose>
-        </set-query-parameter>
+                </set-query-parameter>
+            </otherwise>
+        </choose>
     </inbound>
     <backend>
     </backend>
