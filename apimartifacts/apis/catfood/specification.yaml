@@ -1,3 +1,6 @@
+# https://prod-20.australiaeast.logic.azure.com/workflows/80b87b8cc7114bb1a6f502e7da50a35e/triggers/manual/paths/invoke?api-version=2016-10-01&sp=/triggers/manual/run&sv=1.0&sig=c2yvrPvfjuFmbbPvjzQVWI6C3P3UahzjYh9-BHZgCtQ&size=S
+
+
 openapi: 3.0.1
 info:
   title: catfood
@@ -20,49 +23,49 @@ paths:
       description: cat food1
       operationId: cat-food1
       parameters:
-        - name: api-version
-          in: query
-          required: true
-          schema:
-            enum:
-              - ''
-            type: ''
-            default: ''
-        - name: sp
-          in: query
-          required: true
-          schema:
-            enum:
-              - ''
-            type: ''
-            default: ''
-        - name: sv
-          in: query
-          required: true
-          schema:
-            enum:
-              - ''
-            type: ''
-            default: ''
-        - name: sig
-          in: query
-          required: true
-          schema:
-            enum:
-              - ''
-            type: ''
-            default: ''
         - name: size
           in: query
+          description: The size of the cat food product (S, M, L, or all)
           required: true
           schema:
+            type: string
             enum:
-              - ''
-              - ''
-              - ''
-              - ''
-            type: ''
-            default: ''
+              - S
+              - M
+              - L
+              - all
+        - name: api-version
+          in: query
+          description: The API Version
+          required: true
+          schema:
+            type: string
+            enum:
+              - 2016-10-01
+        - name: sp
+          in: query
+          description: The SP
+          required: true
+          schema:
+            type: string
+            enum:
+              - /triggers/manual/run
+        - name: sv
+          in: query
+          description: The SV
+          required: true
+          schema:
+            type: string
+            enum:
+              - 1.0
+        - name: sig
+          in: query
+          description: The SIG
+          required: true
+          schema:
+            type: string
+            enum:
+              - c2yvrPvfjuFmbbPvjzQVWI6C3P3UahzjYh9-BHZgCtQ
       responses:
         '200':
           description: 'null'
