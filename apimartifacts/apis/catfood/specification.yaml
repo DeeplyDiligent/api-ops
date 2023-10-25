@@ -61,6 +61,47 @@ paths:
       responses:
         '200':
           description: 'null'
+  /small-cat-food:
+    get:
+      summary: Small Cat food
+      description: Small Cat food
+      operationId: small-cat-food
+      parameters:
+        - name: api-version
+          in: query
+          description: The API Version
+          required: true
+          schema:
+            type: string
+            enum:
+              - 2016-10-01
+        - name: sp
+          in: query
+          description: The SP
+          required: true
+          schema:
+            type: string
+            enum:
+              - /triggers/manual/run
+        - name: sv
+          in: query
+          description: The SV
+          required: true
+          schema:
+            type: string
+            enum:
+              - 1.0
+        - name: sig
+          in: query
+          description: The SIG
+          required: true
+          schema:
+            type: string
+            enum:
+              - c2yvrPvfjuFmbbPvjzQVWI6C3P3UahzjYh9-BHZgCtQ
+      responses:
+        '200':
+          description: 'null'
 components:
   securitySchemes:
     apiKeyHeader:
