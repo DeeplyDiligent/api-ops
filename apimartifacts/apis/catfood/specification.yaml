@@ -9,14 +9,6 @@ info:
 servers:
   - url: https://api-ops-demo.azure-api.net/catfood
 paths:
-  /catfood:
-    get:
-      summary: cat food
-      description: cat food
-      operationId: cat-food
-      responses:
-        '200':
-          description: 'null'
   /:
     get:
       summary: cat food1
