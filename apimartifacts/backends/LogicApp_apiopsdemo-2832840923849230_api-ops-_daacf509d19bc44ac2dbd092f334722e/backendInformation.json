@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "description": "apiopsdemo-2832840923849230",
+    "protocol": "http",
+    "resourceId": "https://management.azure.com/subscriptions/460ac9b4-049e-4836-9731-296fc1608c6b/resourceGroups/api-ops-demo/providers/Microsoft.Logic/workflows/apiopsdemo-2832840923849230",
+    "url": "https://prod-20.australiaeast.logic.azure.com/workflows/80b87b8cc7114bb1a6f502e7da50a35e/triggers"
+  }
+}

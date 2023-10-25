@@ -1,11 +1,11 @@
 openapi: 3.0.1
 info:
-  title: Demo Conference API
+  title: Demo Conference API 2
   description: 'A sample API with information related to a technical conference.  The available resources  include *Speakers*, *Sessions* and *Topics*.  A single write operation is available to provide  feedback on a session.'
   version: '1.0'
 servers:
-  - url: http://api-ops-demo.azure-api.net/conference
-  - url: https://api-ops-demo.azure-api.net/conference
+  - url: http://api-ops-demo.azure-api.net/conf2
+  - url: https://api-ops-demo.azure-api.net/conf2
 paths:
   /sessions:
     get:
@@ -83,7 +83,9 @@ paths:
           text/plain:
             schema:
               $ref: '#/components/schemas/Body'
-            example: ''
+            examples:
+              default:
+                value: 
       responses:
         '200':
           description: OK
@@ -93,15 +95,12 @@ paths:
   /speakers:
     get:
       summary: GetSpeakers
-      description: GetSpeakers
       operationId: GetSpeakers
       parameters:
         - name: dayno
           in: query
-          description: Format - int32. Day number between 1-7.
+          description: Format - int32.
           schema:
-            maximum: 7.0
-            minimum: 1.0
             type: integer
         - name: speakername
           in: query
@@ -115,7 +114,6 @@ paths:
   '/speaker/{id}':
     get:
       summary: GetSpeaker
-      description: GetSpeaker
       operationId: GetSpeaker
       parameters:
         - name: id
@@ -133,7 +131,6 @@ paths:
   '/speaker/{id}/sessions':
     get:
       summary: GetSpeakerSessions
-      description: GetSpeakerSessions
       operationId: GetSpeakerSessions
       parameters:
         - name: id
@@ -150,7 +147,6 @@ paths:
   '/speaker/{id}/topics':
     get:
       summary: GetSpeakerTopics
-      description: GetSpeakerTopics
       operationId: GetSpeakerTopics
       parameters:
         - name: id
@@ -167,7 +163,6 @@ paths:
   /topics:
     get:
       summary: GetTopics
-      description: GetTopics
       operationId: GetTopics
       parameters:
         - name: dayno
@@ -183,7 +178,6 @@ paths:
   '/topic/{id}':
     get:
       summary: GetTopic
-      description: GetTopic
       operationId: GetTopic
       parameters:
         - name: id
@@ -200,7 +194,6 @@ paths:
   '/topic/{id}/speakers':
     get:
       summary: GetTopicSpeakers
-      description: GetTopicSpeakers
       operationId: GetTopicSpeakers
       parameters:
         - name: id
@@ -217,7 +210,6 @@ paths:
   '/topic/{id}/sessions':
     get:
       summary: GetTopicSessions
-      description: GetTopicSessions
       operationId: GetTopicSessions
       parameters:
         - name: id
@@ -235,16 +227,3 @@ components:
   schemas:
     Body:
       type: string
-  securitySchemes:
-    apiKeyHeader:
-      type: apiKey
-      name: Ocp-Apim-Subscription-Key
-      in: header
-    apiKeyQuery:
-      type: apiKey
-      name: subscription-key
-      in: query
-security:
-  - { }
-  - apiKeyHeader: [ ]
-  - apiKeyQuery: [ ]

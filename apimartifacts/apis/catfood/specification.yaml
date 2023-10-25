@@ -1,0 +1,81 @@
+openapi: 3.0.1
+info:
+  title: catfood
+  description: ''
+  version: '1.0'
+servers:
+  - url: https://api-ops-demo.azure-api.net/catfood
+paths:
+  /catfood:
+    get:
+      summary: cat food
+      description: cat food
+      operationId: cat-food
+      responses:
+        '200':
+          description: 'null'
+  /:
+    get:
+      summary: cat food1
+      description: cat food1
+      operationId: cat-food1
+      parameters:
+        - name: api-version
+          in: query
+          required: true
+          schema:
+            enum:
+              - ''
+            type: ''
+            default: ''
+        - name: sp
+          in: query
+          required: true
+          schema:
+            enum:
+              - ''
+            type: ''
+            default: ''
+        - name: sv
+          in: query
+          required: true
+          schema:
+            enum:
+              - ''
+            type: ''
+            default: ''
+        - name: sig
+          in: query
+          required: true
+          schema:
+            enum:
+              - ''
+            type: ''
+            default: ''
+        - name: size
+          in: query
+          required: true
+          schema:
+            enum:
+              - ''
+              - ''
+              - ''
+              - ''
+            type: ''
+            default: ''
+      responses:
+        '200':
+          description: 'null'
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

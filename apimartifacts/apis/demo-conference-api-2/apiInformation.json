@@ -3,9 +3,9 @@
     "apiRevision": "1",
     "authenticationSettings": {},
     "description": "A sample API with information related to a technical conference.  The available resources  include *Speakers*, *Sessions* and *Topics*.  A single write operation is available to provide  feedback on a session.",
-    "displayName": "Demo Conference API",
+    "displayName": "Demo Conference API 2",
     "isCurrent": true,
-    "path": "conference",
+    "path": "conf2",
     "protocols": [
       "http",
       "https"

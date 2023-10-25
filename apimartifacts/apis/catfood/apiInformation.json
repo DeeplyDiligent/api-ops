@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "",
+    "displayName": "catfood",
+    "isCurrent": true,
+    "path": "catfood",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://ap-ops-demo-2.azure-api.net/catfood",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}
