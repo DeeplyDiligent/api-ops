@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "Azure Logic App.",
+    "displayName": "apiopsdemo-2832840923849230",
+    "isCurrent": true,
+    "path": "catfoodprices",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://prod-20.australiaeast.logic.azure.com/workflows/80b87b8cc7114bb1a6f502e7da50a35e/triggers",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

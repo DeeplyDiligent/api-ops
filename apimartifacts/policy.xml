@@ -8,10 +8,13 @@
     - To remove a policy, delete the corresponding policy statement from the policy document.
     - Policies are applied in the order of their appearance, from the top down.
 -->
+<!-- Query: when the parameter size is small, medium or large write the policy to change it to S, M or L else pass through the original parameter value-->
+<!-- Rate lmit the requests to 5 per seond  -->
 <policies>
 	<inbound />
 	<backend>
 		<forward-request />
 	</backend>
 	<outbound />
+	<on-error />
 </policies>

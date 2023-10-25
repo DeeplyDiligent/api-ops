@@ -98,5 +98,6 @@ components:
       name: subscription-key
       in: query
 security:
+  - { }
   - apiKeyHeader: [ ]
   - apiKeyQuery: [ ]

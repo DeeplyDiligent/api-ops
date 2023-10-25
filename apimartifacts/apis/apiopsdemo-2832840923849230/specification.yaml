@@ -1,0 +1,39 @@
+openapi: 3.0.1
+info:
+  title: apiopsdemo-2832840923849230
+  description: Azure Logic App.
+  version: '1.0'
+servers:
+  - url: https://api-ops-demo.azure-api.net/catfoodprices
+paths:
+  /manual/paths/invoke:
+    get:
+      summary: manual-invoke
+      description: Trigger a run of the logic app.
+      operationId: manual-invoke
+      requestBody:
+        description: The request body.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/request-manual'
+      responses:
+        '200':
+          description: The Logic App Response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ManualPathsInvokeGet200ApplicationJsonResponse'
+        '500':
+          description: The Logic App Response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ManualPathsInvokeGet500ApplicationJsonResponse'
+components:
+  schemas:
+    request-manual: { }
+    ManualPathsInvokeGet200ApplicationJsonResponse:
+      type: object
+    ManualPathsInvokeGet500ApplicationJsonResponse:
+      type: object
